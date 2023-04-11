@@ -7,20 +7,40 @@
     <title>Tabelas</title>
 
     <style>
-        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr.primeiralinha{
+            background-color: gray;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        td.destak{
+            background-color: yellow;
+        }
+
     </style>
 </head>
 <body>
     <h1>Minha primeira tabela</h1>
     <table>
-        <tr>
+        <tr class="primeiralinha">
             <td>A1</td>
             <td>B1</td>
             <td>C1</td>
         </tr>
 
         <tr>
-            <td>A2</td>
+            <td class="destak">A2</td>
             <td>B2</td>
             <td>C2</td>
         </tr>
@@ -35,6 +55,15 @@
             <td>A4</td>
             <td>B4</td>
             <td>C4</td>
+        </tr>
+
+        <tr>
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+
+        <tr>
+            <td>A6</td>
         </tr>
 
     </table>
