@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*para fazer com que o cabeçalho fique fixo*/
         }
 
         th, td{
@@ -25,9 +26,20 @@
             padding: 10px;
             background-color: lightgray;
         }
-        thead{
+
+        thead, tfoot{
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th{
+            background-color: gray;
+            position: sticky;
+            top: -1px;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
         }
 
         td.num{
@@ -216,8 +228,7 @@
 
         <tfoot>
             <tr>
-                <td style="border: none;"> </td>
-                <th scope="row">Total de Habitantes</th>
+                <th scope="row" colspan="2">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
